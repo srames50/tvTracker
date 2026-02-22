@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TV Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="container header">
+      <h1>Dad's TV Tracker</h1>
+      <nav>
+        <a class="nav-link active" href="index.html">Dashboard</a>
+        <a class="nav-link" href="sessions.html">Sessions</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section class="card">
+        <h2>Lifetime TV Hours</h2>
+        <p id="total-hours" class="big-number">0.00 hrs</p>
+        <p id="sync-status" class="message"></p>
+      </section>
+
+      <section class="stats-grid">
+        <article class="card">
+          <h3>Average Daily</h3>
+          <p id="avg-daily" class="stat-number">0.00 hrs/day</p>
+        </article>
+        <article class="card">
+          <h3>Average Weekly</h3>
+          <p id="avg-weekly" class="stat-number">0.00 hrs/week</p>
+        </article>
+        <article class="card">
+          <h3>Total Sessions</h3>
+          <p id="total-sessions" class="stat-number">0</p>
+        </article>
+      </section>
+
+      <section class="card">
+        <h3>How averages are calculated</h3>
+        <p>
+          Daily average is based on the full tracked period from first session date to latest
+          session date (inclusive).
+        </p>
+      </section>
+    </main>
+
+    <script src="config.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
